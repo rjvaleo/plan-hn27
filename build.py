@@ -221,7 +221,7 @@ def step(who, cls, title, text): return '<div class="step"><span class="who %s">
 HOW = ('<div class="w hero"><h1>How I built this.</h1><p class="lead">AI agents did the research and built these pages. Here is how the work was run, what was checked, and where the AI was wrong.</p></div>'
   '<section class="w"><h2>The workflow</h2><div class="flow">'
   + step('Me', 'me', 'Set the brief', 'Pitch the role with a plan and a working prototype. Read the company as its customer would first. Report what turns up, privately.')
-  + step('AI', 'ai', 'Read everything public', 'The lead agent read OpenAI: 117 pages saved, two documentation indexes and 201 changelog entries searched. A second agent read six rival providers: 99 pages.')
+  + step('AI', 'ai', 'Read everything public', 'The lead agent read OpenAI: 111 pages saved, two documentation indexes and 201 changelog entries searched. A second agent read six rival providers: 99 pages.')
   + step('AI', 'ai', 'Check each finding', 'Every OpenAI finding was checked against the saved page text. One was rewritten and one was dropped.')
   + step('AI', 'ai', 'Build', 'The plan, the delivery health board and a private findings report.')
   + step('Me', 'me', 'Read and stand behind it', 'I read every page of this site before sending it.')
