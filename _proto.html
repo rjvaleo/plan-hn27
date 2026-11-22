@@ -1,0 +1,82 @@
+<div class="w hero" style="padding-bottom:26px">
+  <h1>The delivery health board.</h1>
+  <p class="lead">The plan&rsquo;s first deliverable, as a page you can use. You are in a delivery review for one deployment. Pick a review date. Click any gate, risk, workstream or number to see why it has the status it has.</p>
+</div>
+
+<div class="w">
+<div class="proto hb" id="proto">
+  <div class="pbar">
+    <span class="pdots" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span class="purl">delivery health &middot; prototype</span>
+    <span class="psample">Sample data. Fernhill Mutual is made up. Not an OpenAI product.</span>
+  </div>
+
+  <div class="pgrid">
+    <div class="pmain">
+
+      <div class="hbtop">
+        <div><b>Claims assistant &middot; Fernhill Mutual</b><span class="sub">A made-up insurer. Launch planned for week 11 of 16.</span></div>
+        <div class="seg sm" role="group" aria-label="Review date" id="reviews">
+          <button type="button" data-rev="w6" aria-pressed="false">Week 6</button>
+          <button type="button" data-rev="w10" aria-pressed="true">Week 10, go or no-go</button>
+          <button type="button" data-rev="w14" aria-pressed="false">Week 14, first adoption</button>
+        </div>
+      </div>
+
+      <div class="conf" id="conf" aria-live="polite"></div>
+
+      <div class="hbhead"><h2 class="ph">Gates</h2><span class="note" id="gcount"></span></div>
+      <div class="gatesg" id="gates"></div>
+
+      <div class="hbhead"><h2 class="ph">Workstreams</h2>
+        <div class="seg sm" role="group" aria-label="Team" id="teams">
+          <button type="button" data-team="all" aria-pressed="true">All</button>
+          <button type="button" data-team="Customer" aria-pressed="false">Customer</button>
+          <button type="button" data-team="OpenAI" aria-pressed="false">OpenAI</button>
+          <button type="button" data-team="Partner" aria-pressed="false">Partner</button>
+        </div>
+      </div>
+      <div class="rows" id="streams"></div>
+
+      <div class="hbhead"><h2 class="ph">Risks</h2><span class="note">Each risk has one owner and the gate it threatens.</span></div>
+      <div class="rows" id="risks"></div>
+
+      <div class="hbhead"><h2 class="ph">Adoption against the baseline</h2><span class="note" id="asof"></span></div>
+      <div class="adopt"><table><thead><tr><th>Measure</th><th>Baseline, week 1</th><th>Now</th><th>Where the number comes from</th></tr></thead><tbody id="adopt"></tbody></table></div>
+      <p class="note pnote" style="margin-top:10px" id="adoptNote"></p>
+
+      <div class="hbhead"><h2 class="ph">What a moved date means for usage</h2>
+        <div class="seg sm" role="group" aria-label="Launch date" id="slip">
+          <button type="button" data-slip="0" aria-pressed="true">Launch on plan</button>
+          <button type="button" data-slip="2" aria-pressed="false">Two weeks late</button>
+        </div>
+      </div>
+      <div class="ramp">
+        <p id="rampText" aria-live="polite"></p>
+        <div class="bars" id="bars" role="img" aria-label="Sample weekly usage, weeks 11 to 18"></div>
+        <div class="barl" id="barl"></div>
+        <p class="note" style="margin-top:10px">Bars are sample usage units per week, with no scale on purpose. The shape is the point: the ramp starts when the launch does.</p>
+      </div>
+    </div>
+
+    <aside class="why" aria-label="Why this status" id="why" aria-live="polite"></aside>
+  </div>
+</div>
+
+<section style="border-top:0;padding-top:34px">
+  <div class="two">
+    <div><h2>What this replaces</h2>
+      <p>Most delivery reviews run from a slide deck that one person updates by hand the night before. A green light on a slide says nothing about who checked it or when.</p>
+      <p>I have no view of how OpenAI runs its reviews today, so this replaces nothing of theirs. It shows the review I would bring.</p></div>
+    <div><h2>Choices I made in this page</h2>
+      <ul class="plain">
+        <li><b>A gate with no data shows a dash, never green.</b><span>At week 10, one gate has nothing behind it, so the board states no launch confidence until a person supplies the figure. This rule comes from my own planning board.</span></li>
+        <li><b>Every number carries its source.</b><span>Stated in a system, joined, derived, or entered by a person. Self-reported hours are marked as estimates, as OpenAI&rsquo;s own guide asks.</span></li>
+        <li><b>Launch confidence is derived, and says from what.</b><span>It is a rule over the gates, not somebody&rsquo;s mood on the day.</span></li>
+        <li><b>Facts from OpenAI&rsquo;s public pages are marked and linked.</b><span>Everything else on the board is sample data.</span></li>
+        <li><b>The usage picture has no dollar figures.</b><span>I have never owned a revenue number, and I will not draw one I cannot source.</span></li>
+      </ul></div>
+  </div>
+  <div class="next"><a class="btn" href="index.html">Back to the plan</a><a class="btn ghost" href="how.html">How I built this</a></div>
+</section>
+</div>
